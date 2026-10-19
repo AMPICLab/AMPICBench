@@ -1,0 +1,37 @@
+* sim_Bias_gen
+* Converted from Cadence ADE Spectre (sky130_release_0.1.0 kit) by tools/spectre2ngspice.py
+* MOSFETs: sky130A subcircuits, W/L in um from the meter-valued design parameters,
+*   W per finger, nf=1, m = multiplier x fingers (as the Cadence pcell netlists it);
+*   as/ad/ps/pd from the pcell geometry (cds_* functions below)
+.lib "/opt/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+* renamed (ngspice function names): Ln -> Ln_
+.param VDD=1.8 Ibias=20u Wp=20u Wn=5u Lp=350n Ln_=300n
+* Cadence sky130 pcell diffusion geometry (finger width w in meters, nf fingers);
+* results in um^2 / um for the sky130A subcircuits (as/ad/ps/pd per finger, as Spectre had them)
+.func cds_as(cdsw, cdsnf) {(((cdsw) < 289.5n) ? (((((175n > (((230n) - 60n) + 80n)) ? 175n : (((230n) - 60n) + 80n)) * 290n) + ((cdsw) * 75n)) + (floor(((cdsnf) - 1) / 2.0) * (((((230n) - 60n) + 80n) * 290n) + ((cdsw) * 150n))) + ((((cdsnf) / 2) - floor((cdsnf) / 2) == 0) ? ((((175n > (((230n) - 60n) + 80n)) ? 175n : (((230n) - 60n) + 80n)) * 290n) + ((cdsw) * 75n)) : 0)) / (cdsnf) : ((((250n > (((230n) - 60n) + 95n)) ? 250n : (((230n) - 60n) + 95n)) * (cdsw)) + (floor(((cdsnf) - 1) / 2.0) * ((((230n) - 60n) + 110n) * (cdsw))) + ((((cdsnf) / 2) - floor((cdsnf) / 2) == 0) ? (((250n > (((230n) - 60n) + 95n)) ? 250n : (((230n) - 60n) + 95n)) * (cdsw)) : 0)) / (cdsnf))*1e12}
+.func cds_ad(cdsw, cdsnf) {(((cdsw) < 289.5n) ? ((floor((cdsnf) / 2.0) * (((((230n) - 60n) + 80n) * 290n) + ((cdsw) * 150n))) + ((((cdsnf) / 2) - floor((cdsnf) / 2) != 0) ? ((((175n > (((230n) - 60n) + 80n)) ? 175n : (((230n) - 60n) + 80n)) * 290n) + ((cdsw) * 75n)) : 0)) / (cdsnf) : ((floor((cdsnf) / 2.0) * ((((230n) - 60n) + 110n) * (cdsw))) + ((((cdsnf) / 2) - floor((cdsnf) / 2) != 0) ? (((250n > (((230n) - 60n) + 95n)) ? 250n : (((230n) - 60n) + 95n)) * (cdsw)) : 0)) / (cdsnf))*1e12}
+.func cds_ps(cdsw, cdsnf) {(((cdsw) < 289.5n) ? (((2 * ((175n > (((230n) - 60n) + 80n)) ? 175n : (((230n) - 60n) + 80n))) + 730n) + (floor(((cdsnf) - 1) / 2.0) * ((2 * (((230n) - 60n) + 80n)) + 880n)) + ((((cdsnf) / 2) - floor((cdsnf) / 2) == 0) ? ((2 * ((175n > (((230n) - 60n) + 80n)) ? 175n : (((230n) - 60n) + 80n))) + 730n) : 0)) / (cdsnf) : (((2 * ((250n > (((230n) - 60n) + 95n)) ? 250n : (((230n) - 60n) + 95n))) + (2 * (cdsw))) + (floor(((cdsnf) - 1) / 2.0) * ((2 * (((230n) - 60n) + 110n)) + (2 * (cdsw)))) + ((((cdsnf) / 2) - floor((cdsnf) / 2) == 0) ? ((2 * ((250n > (((230n) - 60n) + 95n)) ? 250n : (((230n) - 60n) + 95n))) + (2 * (cdsw))) : 0)) / (cdsnf))*1e6}
+.func cds_pd(cdsw, cdsnf) {(((cdsw) < 289.5n) ? ((floor((cdsnf) / 2.0) * ((2 * (((230n) - 60n) + 80n)) + 880n)) + ((((cdsnf) / 2) - floor((cdsnf) / 2) != 0) ? ((2 * ((175n > (((230n) - 60n) + 80n)) ? 175n : (((230n) - 60n) + 80n))) + 730n) : 0)) / (cdsnf) : ((floor((cdsnf) / 2.0) * ((2 * (((230n) - 60n) + 110n)) + (2 * (cdsw)))) + ((((cdsnf) / 2) - floor((cdsnf) / 2) != 0) ? ((2 * ((250n > (((230n) - 60n) + 95n)) ? 250n : (((230n) - 60n) + 95n))) + (2 * (cdsw))) : 0)) / (cdsnf))*1e6}
+.global vdd
+.options reltol=1e-3 gmin=1e-12 vntol=1e-6 abstol=1e-12 tnom=25
+.temp 27
+
+.subckt Bias_gen Vbiasn Vbiasp
+  XNM0 Vbiasn Vbiasn 0 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  II1 Vbiasp 0 dc {Ibias}
+  II0 vdd Vbiasn dc {Ibias}
+  XPM0 Vbiasp Vbiasp vdd vdd sky130_fd_pr__pfet_01v8_lvt W={Wp*1e6} L={Lp*1e6} nf=1 m=1 as={cds_as(Wp,1)} ad={cds_ad(Wp,1)} ps={cds_ps(Wp,1)} pd={cds_pd(Wp,1)}
+.ends Bias_gen
+XI0 Vbiasn Vbiasp Bias_gen
+VV0 vdd 0 dc {VDD}
+
+.control
+set wr_singlescale
+set wr_vecnames
+option numdgt=7
+op
+show m : id vgs vds vth vdsat gm gds
+print all > op_nodes.txt
+show m : id vgs vds vth vdsat gm gds cgs cgd > op_devices.txt
+.endc
+.end

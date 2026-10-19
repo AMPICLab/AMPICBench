@@ -1,0 +1,116 @@
+* sim_Opamp_2stg_Telescopic_ClassA_STB
+* Converted from Cadence ADE Spectre (sky130_release_0.1.0 kit) by tools/spectre2ngspice.py
+* MOSFETs: sky130A subcircuits, W/L in um from the meter-valued design parameters,
+*   W per finger, nf=1, m = multiplier x fingers (as the Cadence pcell netlists it);
+*   as/ad/ps/pd from the pcell geometry (cds_* functions below)
+.lib "/opt/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+* DESIGN CHANGE: Wp_finger 1u -> 4u (Oct 9 2026 (user): Vbias5 replica PMOS PM4/PM5 at Wp/5 like the NMOS replica (Wn_finger = Wn/5); 1u put PM4 in triode)
+* DESIGN CHANGE: Ln_MWS 2.7u -> 3.8u (Oct 9 2026: Cascode_bias retune (user approved). Ln_MWS 2.7u -> 3.8u raises Vbias3 about 50 mV (wide-swing bottom margin -11 -> +21 mV at tt), Lp_MWS 2.7u -> 3.4u lowers Vbias2 about 40 mV (PMOS bottom margin))
+* DESIGN CHANGE: Lp_MWS 2.7u -> 3.4u (Oct 9 2026: Cascode_bias retune (user approved). Ln_MWS 2.7u -> 3.8u raises Vbias3 about 50 mV (wide-swing bottom margin -11 -> +21 mV at tt), Lp_MWS 2.7u -> 3.4u lowers Vbias2 about 40 mV (PMOS bottom margin))
+* renamed (ngspice function names): Ln -> Ln_
+.param Wp_finger=4u Wn_finger=1u Wn=5u Ln_=300n Ibias=20u Wp=20u Lp=700n Ln_MWS=3.8u Lp_MWS=3.4u VDD=1.8 _gpar3=6 Cc=0.6p Rz=1.2K VCM=0.9
+* Cadence sky130 pcell diffusion geometry (finger width w in meters, nf fingers);
+* results in um^2 / um for the sky130A subcircuits (as/ad/ps/pd per finger, as Spectre had them)
+.func cds_as(cdsw, cdsnf) {(((cdsw) < 289.5n) ? (((((175n > (((230n) - 60n) + 80n)) ? 175n : (((230n) - 60n) + 80n)) * 290n) + ((cdsw) * 75n)) + (floor(((cdsnf) - 1) / 2.0) * (((((230n) - 60n) + 80n) * 290n) + ((cdsw) * 150n))) + ((((cdsnf) / 2) - floor((cdsnf) / 2) == 0) ? ((((175n > (((230n) - 60n) + 80n)) ? 175n : (((230n) - 60n) + 80n)) * 290n) + ((cdsw) * 75n)) : 0)) / (cdsnf) : ((((250n > (((230n) - 60n) + 95n)) ? 250n : (((230n) - 60n) + 95n)) * (cdsw)) + (floor(((cdsnf) - 1) / 2.0) * ((((230n) - 60n) + 110n) * (cdsw))) + ((((cdsnf) / 2) - floor((cdsnf) / 2) == 0) ? (((250n > (((230n) - 60n) + 95n)) ? 250n : (((230n) - 60n) + 95n)) * (cdsw)) : 0)) / (cdsnf))*1e12}
+.func cds_ad(cdsw, cdsnf) {(((cdsw) < 289.5n) ? ((floor((cdsnf) / 2.0) * (((((230n) - 60n) + 80n) * 290n) + ((cdsw) * 150n))) + ((((cdsnf) / 2) - floor((cdsnf) / 2) != 0) ? ((((175n > (((230n) - 60n) + 80n)) ? 175n : (((230n) - 60n) + 80n)) * 290n) + ((cdsw) * 75n)) : 0)) / (cdsnf) : ((floor((cdsnf) / 2.0) * ((((230n) - 60n) + 110n) * (cdsw))) + ((((cdsnf) / 2) - floor((cdsnf) / 2) != 0) ? (((250n > (((230n) - 60n) + 95n)) ? 250n : (((230n) - 60n) + 95n)) * (cdsw)) : 0)) / (cdsnf))*1e12}
+.func cds_ps(cdsw, cdsnf) {(((cdsw) < 289.5n) ? (((2 * ((175n > (((230n) - 60n) + 80n)) ? 175n : (((230n) - 60n) + 80n))) + 730n) + (floor(((cdsnf) - 1) / 2.0) * ((2 * (((230n) - 60n) + 80n)) + 880n)) + ((((cdsnf) / 2) - floor((cdsnf) / 2) == 0) ? ((2 * ((175n > (((230n) - 60n) + 80n)) ? 175n : (((230n) - 60n) + 80n))) + 730n) : 0)) / (cdsnf) : (((2 * ((250n > (((230n) - 60n) + 95n)) ? 250n : (((230n) - 60n) + 95n))) + (2 * (cdsw))) + (floor(((cdsnf) - 1) / 2.0) * ((2 * (((230n) - 60n) + 110n)) + (2 * (cdsw)))) + ((((cdsnf) / 2) - floor((cdsnf) / 2) == 0) ? ((2 * ((250n > (((230n) - 60n) + 95n)) ? 250n : (((230n) - 60n) + 95n))) + (2 * (cdsw))) : 0)) / (cdsnf))*1e6}
+.func cds_pd(cdsw, cdsnf) {(((cdsw) < 289.5n) ? ((floor((cdsnf) / 2.0) * ((2 * (((230n) - 60n) + 80n)) + 880n)) + ((((cdsnf) / 2) - floor((cdsnf) / 2) != 0) ? ((2 * ((175n > (((230n) - 60n) + 80n)) ? 175n : (((230n) - 60n) + 80n))) + 730n) : 0)) / (cdsnf) : ((floor((cdsnf) / 2.0) * ((2 * (((230n) - 60n) + 110n)) + (2 * (cdsw)))) + ((((cdsnf) / 2) - floor((cdsnf) / 2) != 0) ? ((2 * ((250n > (((230n) - 60n) + 95n)) ? 250n : (((230n) - 60n) + 95n))) + (2 * (cdsw))) : 0)) / (cdsnf))*1e6}
+.global vdd
+.options reltol=1e-3 gmin=1e-12 vntol=1e-6 abstol=1e-12 tnom=27
+.temp 27
+
+.subckt Bias_gen Vbiasn Vbiasp
+  XNM0 Vbiasn Vbiasn 0 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  II1 Vbiasp 0 dc {Ibias}
+  II0 vdd Vbiasn dc {Ibias}
+  XPM0 Vbiasp Vbiasp vdd vdd sky130_fd_pr__pfet_01v8_lvt W={Wp*1e6} L={Lp*1e6} nf=1 m=1 as={cds_as(Wp,1)} ad={cds_ad(Wp,1)} ps={cds_ps(Wp,1)} pd={cds_pd(Wp,1)}
+.ends Bias_gen
+.subckt Cascode_bias Vbias_1 Vbias_2 Vbias_3 Vbias_4 Vbiasp
+  XNM11 net4 net4 Vbias_4 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  XNM9 net2 net2 Vbias_3 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  XNM0 Vbias_3 Vbias_3 0 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_MWS*1e6} nf=1 m=1 as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  XNM6 net6 Vbias_4 0 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  XNM4 net3 Vbias_4 0 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  XNM2 net1 Vbias_4 0 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  XNM5 Vbias_1 Vbias_3 net6 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  XNM3 Vbias_2 Vbias_3 net3 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  XNM1 Vbias_4 Vbias_3 net1 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  XPM4 Vbias_1 Vbias_2 net5 vdd sky130_fd_pr__pfet_01v8_lvt W={Wp*1e6} L={Lp*1e6} nf=1 m=1 as={cds_as(Wp,1)} ad={cds_ad(Wp,1)} ps={cds_ps(Wp,1)} pd={cds_pd(Wp,1)}
+  XPM3 net5 Vbias_1 vdd vdd sky130_fd_pr__pfet_01v8_lvt W={Wp*1e6} L={Lp*1e6} nf=1 m=1 as={cds_as(Wp,1)} ad={cds_ad(Wp,1)} ps={cds_ps(Wp,1)} pd={cds_pd(Wp,1)}
+  XPM0 net2 Vbiasp vdd vdd sky130_fd_pr__pfet_01v8_lvt W={Wp*1e6} L={Lp*1e6} nf=1 m=1 as={cds_as(Wp,1)} ad={cds_ad(Wp,1)} ps={cds_ps(Wp,1)} pd={cds_pd(Wp,1)}
+  XPM2 Vbias_2 Vbias_2 vdd vdd sky130_fd_pr__pfet_01v8_lvt W={Wp*1e6} L={Lp_MWS*1e6} nf=1 m=1 as={cds_as(Wp,1)} ad={cds_ad(Wp,1)} ps={cds_ps(Wp,1)} pd={cds_pd(Wp,1)}
+  XPM1 net4 Vbiasp vdd vdd sky130_fd_pr__pfet_01v8_lvt W={Wp*1e6} L={Lp*1e6} nf=1 m=1 as={cds_as(Wp,1)} ad={cds_ad(Wp,1)} ps={cds_ps(Wp,1)} pd={cds_pd(Wp,1)}
+.ends Cascode_bias
+.subckt ClassA_stg_PMOS Vbias_3 Vbias_4 vin vout
+  XNM5 vout Vbias_3 net1 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m={_gpar3} as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  XNM4 net1 Vbias_4 0 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m={_gpar3} as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  XPM2 vout vin vdd vdd sky130_fd_pr__pfet_01v8_lvt W={Wp*1e6} L={Lp*1e6} nf=1 m={_gpar3} as={cds_as(Wp,1)} ad={cds_ad(Wp,1)} ps={cds_ps(Wp,1)} pd={cds_pd(Wp,1)}
+.ends ClassA_stg_PMOS
+.subckt Telescopic_Amp VCM Vbias_2 Vbias_3 Vbias_4 vm vout vp
+  XPM2 net0100 net082 vdd vdd sky130_fd_pr__pfet_01v8_lvt W={Wp*1e6} L={Lp*1e6} nf=1 m=1 as={cds_as(Wp,1)} ad={cds_ad(Wp,1)} ps={cds_ps(Wp,1)} pd={cds_pd(Wp,1)}
+  XPM3 net097 net082 vdd vdd sky130_fd_pr__pfet_01v8_lvt W={Wp*1e6} L={Lp*1e6} nf=1 m=1 as={cds_as(Wp,1)} ad={cds_ad(Wp,1)} ps={cds_ps(Wp,1)} pd={cds_pd(Wp,1)}
+  XPM4 net016 Vbias5 vdd vdd sky130_fd_pr__pfet_01v8_lvt W={Wp_finger*1e6} L={Lp*1e6} nf=1 m=1 as={cds_as(Wp_finger,1)} ad={cds_ad(Wp_finger,1)} ps={cds_ps(Wp_finger,1)} pd={cds_pd(Wp_finger,1)}
+  XPM1 net082 Vbias_2 net0100 vdd sky130_fd_pr__pfet_01v8_lvt W={Wp*1e6} L={Lp*1e6} nf=1 m=1 as={cds_as(Wp,1)} ad={cds_ad(Wp,1)} ps={cds_ps(Wp,1)} pd={cds_pd(Wp,1)}
+  XPM0 vout Vbias_2 net097 vdd sky130_fd_pr__pfet_01v8_lvt W={Wp*1e6} L={Lp*1e6} nf=1 m=1 as={cds_as(Wp,1)} ad={cds_ad(Wp,1)} ps={cds_ps(Wp,1)} pd={cds_pd(Wp,1)}
+  XPM5 Vbias5 Vbias_2 net016 vdd sky130_fd_pr__pfet_01v8_lvt W={Wp_finger*1e6} L={Lp*1e6} nf=1 m=1 as={cds_as(Wp_finger,1)} ad={cds_ad(Wp_finger,1)} ps={cds_ps(Wp_finger,1)} pd={cds_pd(Wp_finger,1)}
+  XNM8 Vbias5 Vbias5 net015 0 sky130_fd_pr__nfet_01v8_lvt W={Wn_finger*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn_finger,1)} ad={cds_ad(Wn_finger,1)} ps={cds_ps(Wn_finger,1)} pd={cds_pd(Wn_finger,1)}
+  XNM9 net015 VCM net014 0 sky130_fd_pr__nfet_01v8_lvt W={Wn_finger*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn_finger,1)} ad={cds_ad(Wn_finger,1)} ps={cds_ps(Wn_finger,1)} pd={cds_pd(Wn_finger,1)}
+  XNM4 net8 Vbias_3 net012 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  XNM6 net012 Vbias_4 0 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  XNM10 net014 Vbias_3 net017 0 sky130_fd_pr__nfet_01v8_lvt W={Wn_finger*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn_finger,1)} ad={cds_ad(Wn_finger,1)} ps={cds_ps(Wn_finger,1)} pd={cds_pd(Wn_finger,1)}
+  XNM1 net030 vm net8 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  XNM7 net6 Vbias_4 0 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  XNM0 net074 vp net8 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  XNM5 net8 Vbias_3 net6 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  XNM3 vout Vbias5 net030 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  XNM2 net082 Vbias5 net074 0 sky130_fd_pr__nfet_01v8_lvt W={Wn*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn,1)} ad={cds_ad(Wn,1)} ps={cds_ps(Wn,1)} pd={cds_pd(Wn,1)}
+  XNM11 net017 Vbias_4 0 0 sky130_fd_pr__nfet_01v8_lvt W={Wn_finger*1e6} L={Ln_*1e6} nf=1 m=1 as={cds_as(Wn_finger,1)} ad={cds_ad(Wn_finger,1)} ps={cds_ps(Wn_finger,1)} pd={cds_pd(Wn_finger,1)}
+.ends Telescopic_Amp
+.subckt Opamp_2stg_Telescopic_ClassA VCM Vbias_2 Vbias_3 Vbias_4 vm vout vp
+  XI6 Vbias_3 Vbias_4 net3 vout ClassA_stg_PMOS
+  XI7 VCM Vbias_2 Vbias_3 Vbias_4 vp net3 vm Telescopic_Amp
+  CC1 net2 vout {Cc} m=1
+  RR1 net2 net3 {Rz} m=1
+.ends Opamp_2stg_Telescopic_ClassA
+XI0 Vbiasn Vbiasp Bias_gen
+XI2 Vbias_1 Vbias_2 Vbias_3 Vbias_4 Vbiasp Cascode_bias
+* --- stb probe IPRB0: Tian double injection ---
+Vprb_inj net6 vout 0 ac 1
+Iprb_inj 0 net6 0 ac 0
+VV2 VCM 0 dc {VCM}
+VV4 vdd 0 dc {VDD}
+VV0 vin 0 dc {VCM}
+CC0 vout 0 1p m=1
+XI1 VCM Vbias_2 Vbias_3 Vbias_4 net6 vout vin Opamp_2stg_Telescopic_ClassA
+
+.control
+set wr_singlescale
+set wr_vecnames
+option numdgt=7
+op
+show m : id vgs vds vth vdsat gm gds
+print all > op_nodes.txt
+show m : id vgs vds vth vdsat gm gds cgs cgd > op_devices.txt
+* --- loop gain (equivalent of Spectre stb), Tian double injection ---
+ac dec 50 10 10G
+let lg_v1 = v(net6)
+let lg_i1 = i(Vprb_inj)
+alter Vprb_inj acmag=0
+alter Iprb_inj acmag=1
+ac dec 50 10 10G
+let lg_v2 = v(net6)
+let lg_i2 = i(Vprb_inj)
+let v1 = ac1.lg_v1
+let i1 = ac1.lg_i1
+let loopgain = 1/(1/(2*(i1*lg_v2 - v1*lg_i2) + v1 + lg_i2) - 1)
+let lg_db = db(loopgain)
+let lg_ph = 180/pi*cph(loopgain)
+wrdata stb.txt lg_db lg_ph
+meas ac ugf when lg_db=0
+meas ac pm_raw find lg_ph at=ugf
+meas ac dcgain_db find lg_db at=10
+meas ac f180 when lg_ph=-180
+meas ac gm_db find lg_db at=f180
+print ugf pm_raw dcgain_db f180 gm_db > stb_meas.txt
+.endc
+.end

@@ -1,0 +1,129 @@
+{
+ "ff_-40": {
+  "worst": "m.xi1.xnm7.msky130_fd",
+  "worst_mV": 21.0,
+  "triode": []
+ },
+ "ff_27": {
+  "worst": "m.xi2.xpm3.msky130_fd",
+  "worst_mV": 26.0,
+  "triode": []
+ },
+ "ff_125": {
+  "worst": "m.xi1.xpm5.msky130_fd",
+  "worst_mV": -105.2,
+  "triode": [
+   "m.xi1.xnm10.msky130_f",
+   "m.xi1.xnm4.msky130_fd",
+   "m.xi1.xnm5.msky130_fd",
+   "m.xi1.xpm0.msky130_fd",
+   "m.xi1.xpm1.msky130_fd",
+   "m.xi1.xpm2.msky130_fd",
+   "m.xi1.xpm3.msky130_fd",
+   "m.xi1.xpm5.msky130_fd",
+   "m.xi2.xpm3.msky130_fd",
+   "m.xi2.xpm4.msky130_fd"
+  ]
+ },
+ "fs_-40": {
+  "worst": "m.xi1.xnm7.msky130_fd",
+  "worst_mV": -9.3,
+  "triode": [
+   "m.xi1.xnm11.msky130_f",
+   "m.xi1.xnm6.msky130_fd",
+   "m.xi1.xnm7.msky130_fd"
+  ]
+ },
+ "fs_27": {
+  "worst": "m.xi1.xnm5.msky130_fd",
+  "worst_mV": -13.9,
+  "triode": [
+   "m.xi1.xnm10.msky130_f",
+   "m.xi1.xnm11.msky130_f",
+   "m.xi1.xnm4.msky130_fd",
+   "m.xi1.xnm5.msky130_fd",
+   "m.xi1.xnm6.msky130_fd",
+   "m.xi1.xnm7.msky130_fd"
+  ]
+ },
+ "fs_125": {
+  "worst": "m.xi1.xpm5.msky130_fd",
+  "worst_mV": -182.2,
+  "triode": [
+   "m.xi1.xnm10.msky130_f",
+   "m.xi1.xnm11.msky130_f",
+   "m.xi1.xnm4.msky130_fd",
+   "m.xi1.xnm5.msky130_fd",
+   "m.xi1.xnm6.msky130_fd",
+   "m.xi1.xnm7.msky130_fd",
+   "m.xi1.xpm0.msky130_fd",
+   "m.xi1.xpm1.msky130_fd",
+   "m.xi1.xpm2.msky130_fd",
+   "m.xi1.xpm3.msky130_fd",
+   "m.xi1.xpm5.msky130_fd",
+   "m.xi2.xpm3.msky130_fd",
+   "m.xi2.xpm4.msky130_fd"
+  ]
+ },
+ "sf_-40": {
+  "worst": "m.xi1.xnm7.msky130_fd",
+  "worst_mV": 20.0,
+  "triode": []
+ },
+ "sf_27": {
+  "worst": "m.xi2.xpm3.msky130_fd",
+  "worst_mV": 32.3,
+  "triode": []
+ },
+ "sf_125": {
+  "worst": "m.xi1.xnm5.msky130_fd",
+  "worst_mV": 11.0,
+  "triode": []
+ },
+ "ss_-40": {
+  "worst": "m.xi1.xnm7.msky130_fd",
+  "worst_mV": -7.5,
+  "triode": [
+   "m.xi1.xnm11.msky130_f",
+   "m.xi1.xnm6.msky130_fd",
+   "m.xi1.xnm7.msky130_fd"
+  ]
+ },
+ "ss_27": {
+  "worst": "m.xi1.xnm5.msky130_fd",
+  "worst_mV": -1.1,
+  "triode": [
+   "m.xi1.xnm4.msky130_fd",
+   "m.xi1.xnm5.msky130_fd"
+  ]
+ },
+ "ss_125": {
+  "worst": "m.xi1.xnm10.msky130_f",
+  "worst_mV": -53.0,
+  "triode": [
+   "m.xi1.xnm10.msky130_f",
+   "m.xi1.xnm4.msky130_fd",
+   "m.xi1.xnm5.msky130_fd"
+  ]
+ },
+ "tt_-40": {
+  "worst": "m.xi1.xnm7.msky130_fd",
+  "worst_mV": 7.5,
+  "triode": []
+ },
+ "tt_27": {
+  "worst": "m.xi1.xnm5.msky130_fd",
+  "worst_mV": 21.2,
+  "triode": []
+ },
+ "tt_125": {
+  "worst": "m.xi1.xpm5.msky130_fd",
+  "worst_mV": -33.8,
+  "triode": [
+   "m.xi1.xnm10.msky130_f",
+   "m.xi1.xnm4.msky130_fd",
+   "m.xi1.xnm5.msky130_fd",
+   "m.xi1.xpm5.msky130_fd"
+  ]
+ }
+}

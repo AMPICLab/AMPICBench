@@ -1,0 +1,234 @@
+{
+ "ff_-40": {
+  "worst": "m.xi1.xi7.xnm7.msky13",
+  "worst_mV": 21.0,
+  "triode": [],
+  "loop": {
+   "T0_dB": 83.74,
+   "UGF_Hz": 82220000.0,
+   "PM_deg": 51.78,
+   "GM_dB": 14.24,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "ff_27": {
+  "worst": "m.xi2.xpm3.msky130_fd",
+  "worst_mV": 26.0,
+  "triode": [],
+  "loop": {
+   "T0_dB": 79.58,
+   "UGF_Hz": 73470000.0,
+   "PM_deg": 46.64,
+   "GM_dB": 12.16,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "ff_125": {
+  "worst": "m.xi1.xi7.xpm5.msky13",
+  "worst_mV": -105.2,
+  "triode": [
+   "m.xi1.xi7.xnm10.msky1",
+   "m.xi1.xi7.xnm4.msky13",
+   "m.xi1.xi7.xnm5.msky13",
+   "m.xi1.xi7.xpm0.msky13",
+   "m.xi1.xi7.xpm1.msky13",
+   "m.xi1.xi7.xpm2.msky13",
+   "m.xi1.xi7.xpm3.msky13",
+   "m.xi1.xi7.xpm5.msky13",
+   "m.xi2.xpm3.msky130_fd",
+   "m.xi2.xpm4.msky130_fd"
+  ],
+  "loop": {
+   "T0_dB": 59.2,
+   "UGF_Hz": 60350000.0,
+   "PM_deg": 44.82,
+   "GM_dB": 11.94,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "fs_-40": {
+  "worst": "m.xi1.xi7.xnm7.msky13",
+  "worst_mV": -9.3,
+  "triode": [
+   "m.xi1.xi7.xnm11.msky1",
+   "m.xi1.xi7.xnm6.msky13",
+   "m.xi1.xi7.xnm7.msky13"
+  ],
+  "loop": {
+   "T0_dB": 82.88,
+   "UGF_Hz": 72570000.0,
+   "PM_deg": 53.23,
+   "GM_dB": 14.51,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "fs_27": {
+  "worst": "m.xi1.xi7.xnm5.msky13",
+  "worst_mV": -13.8,
+  "triode": [
+   "m.xi1.xi7.xnm10.msky1",
+   "m.xi1.xi7.xnm11.msky1",
+   "m.xi1.xi7.xnm4.msky13",
+   "m.xi1.xi7.xnm5.msky13",
+   "m.xi1.xi7.xnm6.msky13",
+   "m.xi1.xi7.xnm7.msky13"
+  ],
+  "loop": {
+   "T0_dB": 75.84,
+   "UGF_Hz": 64590000.0,
+   "PM_deg": 48.68,
+   "GM_dB": 12.44,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "fs_125": {
+  "worst": "m.xi1.xi7.xpm5.msky13",
+  "worst_mV": -182.2,
+  "triode": [
+   "m.xi1.xi7.xnm10.msky1",
+   "m.xi1.xi7.xnm11.msky1",
+   "m.xi1.xi7.xnm4.msky13",
+   "m.xi1.xi7.xnm5.msky13",
+   "m.xi1.xi7.xnm6.msky13",
+   "m.xi1.xi7.xnm7.msky13",
+   "m.xi1.xi7.xpm0.msky13",
+   "m.xi1.xi7.xpm1.msky13",
+   "m.xi1.xi7.xpm2.msky13",
+   "m.xi1.xi7.xpm3.msky13",
+   "m.xi1.xi7.xpm5.msky13",
+   "m.xi2.xpm3.msky130_fd",
+   "m.xi2.xpm4.msky130_fd"
+  ],
+  "loop": {
+   "T0_dB": 53.71,
+   "UGF_Hz": 50740000.0,
+   "PM_deg": 48.4,
+   "GM_dB": 12.89,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "sf_-40": {
+  "worst": "m.xi1.xi7.xnm7.msky13",
+  "worst_mV": 20.0,
+  "triode": [],
+  "loop": {
+   "T0_dB": 77.8,
+   "UGF_Hz": 68420000.0,
+   "PM_deg": 58.94,
+   "GM_dB": 16.79,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "sf_27": {
+  "worst": "m.xi2.xpm3.msky130_fd",
+  "worst_mV": 32.3,
+  "triode": [],
+  "loop": {
+   "T0_dB": 81.54,
+   "UGF_Hz": 69420000.0,
+   "PM_deg": 50.52,
+   "GM_dB": 13.34,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "sf_125": {
+  "worst": "m.xi1.xi7.xnm5.msky13",
+  "worst_mV": 11.0,
+  "triode": [],
+  "loop": {
+   "T0_dB": 78.32,
+   "UGF_Hz": 62300000.0,
+   "PM_deg": 46.24,
+   "GM_dB": 11.81,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "ss_-40": {
+  "worst": "m.xi1.xi7.xnm7.msky13",
+  "worst_mV": -7.5,
+  "triode": [
+   "m.xi1.xi7.xnm11.msky1",
+   "m.xi1.xi7.xnm6.msky13",
+   "m.xi1.xi7.xnm7.msky13"
+  ],
+  "loop": {
+   "T0_dB": 81.58,
+   "UGF_Hz": 66530000.0,
+   "PM_deg": 56.55,
+   "GM_dB": 16.2,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "ss_27": {
+  "worst": "m.xi1.xi7.xnm5.msky13",
+  "worst_mV": -1.0,
+  "triode": [
+   "m.xi1.xi7.xnm4.msky13",
+   "m.xi1.xi7.xnm5.msky13"
+  ],
+  "loop": {
+   "T0_dB": 81.96,
+   "UGF_Hz": 61920000.0,
+   "PM_deg": 50.98,
+   "GM_dB": 13.58,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "ss_125": {
+  "worst": "m.xi1.xi7.xnm10.msky1",
+  "worst_mV": -53.0,
+  "triode": [
+   "m.xi1.xi7.xnm10.msky1",
+   "m.xi1.xi7.xnm4.msky13",
+   "m.xi1.xi7.xnm5.msky13"
+  ],
+  "loop": {
+   "T0_dB": 75.76,
+   "UGF_Hz": 54360000.0,
+   "PM_deg": 47.65,
+   "GM_dB": 11.53,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "tt_-40": {
+  "worst": "m.xi1.xi7.xnm7.msky13",
+  "worst_mV": 7.5,
+  "triode": [],
+  "loop": {
+   "T0_dB": 83.22,
+   "UGF_Hz": 75830000.0,
+   "PM_deg": 54.53,
+   "GM_dB": 15.13,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "tt_27": {
+  "worst": "m.xi1.xi7.xnm5.msky13",
+  "worst_mV": 21.2,
+  "triode": [],
+  "loop": {
+   "T0_dB": 81.91,
+   "UGF_Hz": 68750000.0,
+   "PM_deg": 49.22,
+   "GM_dB": 12.89,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "tt_125": {
+  "worst": "m.xi1.xi7.xpm5.msky13",
+  "worst_mV": -33.8,
+  "triode": [
+   "m.xi1.xi7.xnm10.msky1",
+   "m.xi1.xi7.xnm4.msky13",
+   "m.xi1.xi7.xnm5.msky13",
+   "m.xi1.xi7.xpm5.msky13"
+  ],
+  "loop": {
+   "T0_dB": 68.54,
+   "UGF_Hz": 59180000.0,
+   "PM_deg": 46.06,
+   "GM_dB": 11.18,
+   "zero_dB_crossings": 1.0
+  }
+ }
+}

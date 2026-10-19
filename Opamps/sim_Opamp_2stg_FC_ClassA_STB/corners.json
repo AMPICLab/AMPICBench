@@ -1,0 +1,217 @@
+{
+ "ff_-40": {
+  "worst": "m.xi1.xi7.xnm4.msky13",
+  "worst_mV": 21.5,
+  "triode": [],
+  "loop": {
+   "T0_dB": 75.29,
+   "UGF_Hz": 86030000.0,
+   "PM_deg": 35.44,
+   "GM_dB": 9.86,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "ff_27": {
+  "worst": "m.xi1.xi7.xpm0.msky13",
+  "worst_mV": 25.5,
+  "triode": [],
+  "loop": {
+   "T0_dB": 71.77,
+   "UGF_Hz": 74870000.0,
+   "PM_deg": 29.27,
+   "GM_dB": 8.15,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "ff_125": {
+  "worst": "m.xi1.xi7.xpm5.msky13",
+  "worst_mV": -96.5,
+  "triode": [
+   "m.xi1.xi7.xpm0.msky13",
+   "m.xi1.xi7.xpm1.msky13",
+   "m.xi1.xi7.xpm2.msky13",
+   "m.xi1.xi7.xpm3.msky13",
+   "m.xi1.xi7.xpm4.msky13",
+   "m.xi1.xi7.xpm5.msky13",
+   "m.xi2.xpm3.msky130_fd",
+   "m.xi2.xpm4.msky130_fd"
+  ],
+  "loop": {
+   "T0_dB": 51.46,
+   "UGF_Hz": 56400000.0,
+   "PM_deg": 32.62,
+   "GM_dB": 8.86,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "fs_-40": {
+  "worst": "m.xi1.xi7.xnm4.msky13",
+  "worst_mV": -8.3,
+  "triode": [
+   "m.xi1.xi7.xnm4.msky13",
+   "m.xi1.xi7.xnm5.msky13"
+  ],
+  "loop": {
+   "T0_dB": 72.91,
+   "UGF_Hz": 76150000.0,
+   "PM_deg": 37.5,
+   "GM_dB": 10.9,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "fs_27": {
+  "worst": "m.xi1.xi7.xnm1.msky13",
+  "worst_mV": -2.2,
+  "triode": [
+   "m.xi1.xi7.xnm0.msky13",
+   "m.xi1.xi7.xnm1.msky13"
+  ],
+  "loop": {
+   "T0_dB": 67.35,
+   "UGF_Hz": 66100000.0,
+   "PM_deg": 32.08,
+   "GM_dB": 8.48,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "fs_125": {
+  "worst": "m.xi1.xi7.xpm5.msky13",
+  "worst_mV": -148.2,
+  "triode": [
+   "m.xi1.xi7.xnm0.msky13",
+   "m.xi1.xi7.xnm1.msky13",
+   "m.xi1.xi7.xpm0.msky13",
+   "m.xi1.xi7.xpm1.msky13",
+   "m.xi1.xi7.xpm2.msky13",
+   "m.xi1.xi7.xpm3.msky13",
+   "m.xi1.xi7.xpm4.msky13",
+   "m.xi1.xi7.xpm5.msky13",
+   "m.xi2.xpm3.msky130_fd",
+   "m.xi2.xpm4.msky130_fd"
+  ],
+  "loop": {
+   "T0_dB": 45.52,
+   "UGF_Hz": 45460000.0,
+   "PM_deg": 40.94,
+   "GM_dB": 10.91,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "sf_-40": {
+  "worst": "m.xi1.xi7.xnm4.msky13",
+  "worst_mV": 20.8,
+  "triode": [],
+  "loop": {
+   "T0_dB": 75.07,
+   "UGF_Hz": 84140000.0,
+   "PM_deg": 38.88,
+   "GM_dB": 11.38,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "sf_27": {
+  "worst": "m.xi1.xi7.xpm0.msky13",
+  "worst_mV": 32.1,
+  "triode": [],
+  "loop": {
+   "T0_dB": 75.33,
+   "UGF_Hz": 74610000.0,
+   "PM_deg": 32.03,
+   "GM_dB": 8.76,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "sf_125": {
+  "worst": "m.xi1.xi7.xpm0.msky13",
+  "worst_mV": 16.0,
+  "triode": [],
+  "loop": {
+   "T0_dB": 71.13,
+   "UGF_Hz": 63590000.0,
+   "PM_deg": 28.02,
+   "GM_dB": 7.14,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "ss_-40": {
+  "worst": "m.xi1.xi7.xnm4.msky13",
+  "worst_mV": -6.5,
+  "triode": [
+   "m.xi1.xi7.xnm4.msky13",
+   "m.xi1.xi7.xnm5.msky13"
+  ],
+  "loop": {
+   "T0_dB": 73.22,
+   "UGF_Hz": 74130000.0,
+   "PM_deg": 39.61,
+   "GM_dB": 11.9,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "ss_27": {
+  "worst": "m.xi1.xi7.xnm4.msky13",
+  "worst_mV": 4.1,
+  "triode": [],
+  "loop": {
+   "T0_dB": 73.76,
+   "UGF_Hz": 65900000.0,
+   "PM_deg": 33.14,
+   "GM_dB": 9.19,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "ss_125": {
+  "worst": "m.xi1.xi7.xnm1.msky13",
+  "worst_mV": -40.1,
+  "triode": [
+   "m.xi1.xi7.xnm0.msky13",
+   "m.xi1.xi7.xnm1.msky13"
+  ],
+  "loop": {
+   "T0_dB": 67.74,
+   "UGF_Hz": 55880000.0,
+   "PM_deg": 29.71,
+   "GM_dB": 7.6,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "tt_-40": {
+  "worst": "m.xi1.xi7.xnm4.msky13",
+  "worst_mV": 8.3,
+  "triode": [],
+  "loop": {
+   "T0_dB": 74.55,
+   "UGF_Hz": 80950000.0,
+   "PM_deg": 38.51,
+   "GM_dB": 11.29,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "tt_27": {
+  "worst": "m.xi1.xi7.xnm4.msky13",
+  "worst_mV": 24.0,
+  "triode": [],
+  "loop": {
+   "T0_dB": 73.94,
+   "UGF_Hz": 71330000.0,
+   "PM_deg": 31.93,
+   "GM_dB": 8.74,
+   "zero_dB_crossings": 1.0
+  }
+ },
+ "tt_125": {
+  "worst": "m.xi1.xi7.xnm1.msky13",
+  "worst_mV": -16.5,
+  "triode": [
+   "m.xi1.xi7.xnm0.msky13",
+   "m.xi1.xi7.xnm1.msky13"
+  ],
+  "loop": {
+   "T0_dB": 60.79,
+   "UGF_Hz": 58750000.0,
+   "PM_deg": 29.75,
+   "GM_dB": 7.57,
+   "zero_dB_crossings": 1.0
+  }
+ }
+}

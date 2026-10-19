@@ -1,0 +1,13 @@
+# ngspice outputs
+op_nodes.txt
+op_devices.txt
+stb.txt
+stb_meas.txt
+*.raw
+*.log
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
+__pycache__/

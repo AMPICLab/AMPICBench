@@ -1,0 +1,81 @@
+{
+ "ff_-40": {
+  "worst": "m.xi0.xpm0.msky130_fd",
+  "worst_mV": 333.3,
+  "triode": []
+ },
+ "ff_27": {
+  "worst": "m.xi0.xpm0.msky130_fd",
+  "worst_mV": 192.3,
+  "triode": []
+ },
+ "ff_125": {
+  "worst": "m.xi0.xpm0.msky130_fd",
+  "worst_mV": -3.2,
+  "triode": [
+   "m.xi0.xpm0.msky130_fd"
+  ]
+ },
+ "fs_-40": {
+  "worst": "m.xi0.xpm0.msky130_fd",
+  "worst_mV": 277.3,
+  "triode": []
+ },
+ "fs_27": {
+  "worst": "m.xi0.xpm0.msky130_fd",
+  "worst_mV": 136.7,
+  "triode": []
+ },
+ "fs_125": {
+  "worst": "m.xi0.xpm0.msky130_fd",
+  "worst_mV": -56.7,
+  "triode": [
+   "m.xi0.xpm0.msky130_fd"
+  ]
+ },
+ "sf_-40": {
+  "worst": "m.xi0.xnm0.msky130_fd",
+  "worst_mV": 541.7,
+  "triode": []
+ },
+ "sf_27": {
+  "worst": "m.xi0.xpm0.msky130_fd",
+  "worst_mV": 451.8,
+  "triode": []
+ },
+ "sf_125": {
+  "worst": "m.xi0.xpm0.msky130_fd",
+  "worst_mV": 255.0,
+  "triode": []
+ },
+ "ss_-40": {
+  "worst": "m.xi0.xpm0.msky130_fd",
+  "worst_mV": 541.7,
+  "triode": []
+ },
+ "ss_27": {
+  "worst": "m.xi0.xpm0.msky130_fd",
+  "worst_mV": 400.4,
+  "triode": []
+ },
+ "ss_125": {
+  "worst": "m.xi0.xpm0.msky130_fd",
+  "worst_mV": 203.4,
+  "triode": []
+ },
+ "tt_-40": {
+  "worst": "m.xi0.xpm0.msky130_fd",
+  "worst_mV": 439.6,
+  "triode": []
+ },
+ "tt_27": {
+  "worst": "m.xi0.xpm0.msky130_fd",
+  "worst_mV": 298.4,
+  "triode": []
+ },
+ "tt_125": {
+  "worst": "m.xi0.xpm0.msky130_fd",
+  "worst_mV": 101.3,
+  "triode": []
+ }
+}

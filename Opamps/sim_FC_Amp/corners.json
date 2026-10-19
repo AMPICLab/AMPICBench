@@ -1,0 +1,114 @@
+{
+ "ff_-40": {
+  "worst": "m.xi1.xnm4.msky130_fd",
+  "worst_mV": 21.5,
+  "triode": []
+ },
+ "ff_27": {
+  "worst": "m.xi2.xpm3.msky130_fd",
+  "worst_mV": 26.0,
+  "triode": []
+ },
+ "ff_125": {
+  "worst": "m.xi1.xpm5.msky130_fd",
+  "worst_mV": -65.5,
+  "triode": [
+   "m.xi1.xpm0.msky130_fd",
+   "m.xi1.xpm1.msky130_fd",
+   "m.xi1.xpm2.msky130_fd",
+   "m.xi1.xpm3.msky130_fd",
+   "m.xi1.xpm4.msky130_fd",
+   "m.xi1.xpm5.msky130_fd",
+   "m.xi2.xpm3.msky130_fd",
+   "m.xi2.xpm4.msky130_fd"
+  ]
+ },
+ "fs_-40": {
+  "worst": "m.xi1.xnm4.msky130_fd",
+  "worst_mV": -8.3,
+  "triode": [
+   "m.xi1.xnm4.msky130_fd",
+   "m.xi1.xnm5.msky130_fd"
+  ]
+ },
+ "fs_27": {
+  "worst": "m.xi1.xnm1.msky130_fd",
+  "worst_mV": -2.4,
+  "triode": [
+   "m.xi1.xnm0.msky130_fd",
+   "m.xi1.xnm1.msky130_fd"
+  ]
+ },
+ "fs_125": {
+  "worst": "m.xi1.xpm5.msky130_fd",
+  "worst_mV": -115.5,
+  "triode": [
+   "m.xi1.xnm0.msky130_fd",
+   "m.xi1.xnm1.msky130_fd",
+   "m.xi1.xnm4.msky130_fd",
+   "m.xi1.xnm5.msky130_fd",
+   "m.xi1.xpm0.msky130_fd",
+   "m.xi1.xpm1.msky130_fd",
+   "m.xi1.xpm2.msky130_fd",
+   "m.xi1.xpm3.msky130_fd",
+   "m.xi1.xpm4.msky130_fd",
+   "m.xi1.xpm5.msky130_fd",
+   "m.xi2.xpm3.msky130_fd",
+   "m.xi2.xpm4.msky130_fd"
+  ]
+ },
+ "sf_-40": {
+  "worst": "m.xi1.xnm4.msky130_fd",
+  "worst_mV": 20.8,
+  "triode": []
+ },
+ "sf_27": {
+  "worst": "m.xi2.xpm3.msky130_fd",
+  "worst_mV": 32.3,
+  "triode": []
+ },
+ "sf_125": {
+  "worst": "m.xi2.xpm3.msky130_fd",
+  "worst_mV": 16.6,
+  "triode": []
+ },
+ "ss_-40": {
+  "worst": "m.xi1.xnm4.msky130_fd",
+  "worst_mV": -6.5,
+  "triode": [
+   "m.xi1.xnm4.msky130_fd",
+   "m.xi1.xnm5.msky130_fd"
+  ]
+ },
+ "ss_27": {
+  "worst": "m.xi1.xnm4.msky130_fd",
+  "worst_mV": 4.1,
+  "triode": []
+ },
+ "ss_125": {
+  "worst": "m.xi1.xnm1.msky130_fd",
+  "worst_mV": -40.2,
+  "triode": [
+   "m.xi1.xnm0.msky130_fd",
+   "m.xi1.xnm1.msky130_fd"
+  ]
+ },
+ "tt_-40": {
+  "worst": "m.xi1.xnm4.msky130_fd",
+  "worst_mV": 8.3,
+  "triode": []
+ },
+ "tt_27": {
+  "worst": "m.xi1.xnm4.msky130_fd",
+  "worst_mV": 24.0,
+  "triode": []
+ },
+ "tt_125": {
+  "worst": "m.xi1.xnm1.msky130_fd",
+  "worst_mV": -16.8,
+  "triode": [
+   "m.xi1.xnm0.msky130_fd",
+   "m.xi1.xnm1.msky130_fd"
+  ]
+ }
+}
