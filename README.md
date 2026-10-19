@@ -83,9 +83,29 @@ recorded as `DESIGN CHANGE` comments at the top of the affected `.cir` files.
 
 ## Citing
 
-If you use AMPICBench in your work, please cite the AMPIC group. A BibTeX entry will be added here
-once the accompanying paper is available.
+If you use AMPICBench in your work, please cite it. GitHub shows a "Cite this repository" button
+generated from `CITATION.cff`. BibTeX:
+
+```bibtex
+@misc{ampicbench2026,
+  title        = {{AMPICBench}: Analog Circuit Benchmarks for Sizing, Simulation, and Layout Tools},
+  author       = {Saxena, Vishal},
+  organization = {{AMPIC Group}},
+  year         = {2026},
+  howpublished = {\url{https://github.com/<your-user-or-org>/ampic-bench}},
+  note         = {Version 0.1.0}
+}
+```
+
+A reference to the accompanying paper will be added here once it is available.
 
 ## License
 
-No license has been chosen yet. Add a `LICENSE` file before making the repository public.
+Copyright (c) 2026 Vishal Saxena, AMPIC Group.
+
+AMPICBench is released under the
+[Creative Commons Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/)
+license (CC BY-NC 4.0); see [LICENSE](LICENSE). You may share and adapt the material for
+non-commercial purposes with attribution. For commercial use, please contact the AMPIC group.
+
+The sky130 PDK and models are not part of this repository and remain under their own license (Apache-2.0).

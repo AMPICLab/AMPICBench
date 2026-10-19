@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use AMPICBench in your work, please cite it as below."
+title: "AMPICBench: Analog Circuit Benchmarks for Sizing, Simulation, and Layout Tools"
+type: dataset
+authors:
+  - family-names: "Saxena"
+    given-names: "Vishal"
+    affiliation: "AMPIC Group"
+version: "0.1.0"
+date-released: "2026-10-19"
+license: CC-BY-NC-4.0
+repository-code: "https://github.com/<your-user-or-org>/ampic-bench"
+keywords:
+  - analog circuits
+  - benchmark
+  - sky130
+  - ngspice
+  - opamp
+  - circuit sizing
