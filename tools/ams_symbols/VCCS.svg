@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48.75pt" height="60.00pt" viewBox="332.25 348.0 48.75 60.0" >
+<g id="Layer1016" >
+<path d=" 
+M360.0000,364.5000
+L346.5000,378.0000
+L360.0000,391.5000
+L373.5000,378.0000
+L360.0000,364.5000
+Z" 
+style="stroke-width: 2.5000; stroke-linecap: round; stroke-linejoin: round; fill-rule: evenodd; fill: #ffffff; "/>
+<path d=" 
+M360.0000,364.5000
+L346.5000,378.0000
+L360.0000,391.5000
+L373.5000,378.0000
+L360.0000,364.5000
+Z" 
+style="stroke-width: 2.5000; stroke: #000000; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: none; "/>
+</g>
+<path d=" 
+M360.0000,364.5000
+L360.0000,351.0000
+L378.0000,351.0000" 
+style="stroke-width: 2.5000; stroke: #000000; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: none; "/>
+<path d=" 
+M360.0000,405.0000
+L360.0000,391.5000" 
+style="stroke-width: 2.5000; stroke: #000000; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: none; "/>
+<path d=" 
+M342.0000,405.0000
+L378.0000,405.0000
+L378.0000,351.0000
+L342.0000,351.0000
+L342.0000,405.0000
+Z" 
+style="stroke-width: 0.7200; stroke: #000000; stroke-opacity: 0.0000; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: none; "/>
+<path d=" 
+M360.0000,405.0000
+L378.0000,405.0000" 
+style="stroke-width: 2.5000; stroke: #000000; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: none; "/>
+<path d=" 
+M355.2188,369.2812
+L335.2500,369.2812" 
+style="stroke-width: 2.5000; stroke: #000000; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: none; "/>
+<path d=" 
+M355.3594,386.8594
+L335.2500,386.8594" 
+style="stroke-width: 2.5000; stroke: #000000; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: none; "/>
+<path d=" 
+M337.5000,363.3750
+L344.2500,363.3750" 
+style="stroke-width: 2.0000; stroke: #000000; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; fill: none; "/>
+<path d=" 
+M340.8750,360.0000
+L340.8750,366.7500" 
+style="stroke-width: 2.0000; stroke: #000000; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; fill: none; "/>
+<path d=" 
+M337.5000,391.5000
+L344.2500,391.5000" 
+style="stroke-width: 2.0000; stroke: #000000; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; fill: none; "/>
+<defs>
+<marker id="endMarker4"  markerUnits="strokeWidth" orient="auto" markerWidth="8" markerHeight="6"
+ viewBox="0 0 10 10" refX="1" refY="5">
+<polyline points="0,0 10,5 0,10 1,5" fill="solid" />
+</marker>
+</defs>
+<path d=" 
+M360.0000,370.1250
+L360.0000,387.5625" 
+style="stroke-width: 2.5000; stroke: #000000; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: none; marker-end: url(#endMarker4); "/>
+</svg>

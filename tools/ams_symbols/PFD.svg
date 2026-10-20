@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96.50pt" height="78.00pt" viewBox="284.5 357.0 96.5 78.0" >
+<path d=" 
+M288.0000,432.0000
+L353.2500,432.0000
+L353.2500,360.0000
+L288.0000,360.0000
+L288.0000,432.0000
+Z" 
+style="stroke-width: 3.5000; stroke: #000000; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; fill: none; "/>
+<text x="287.5000" y="379.1250">
+<tspan font-family="Times New Roman" font-style="italic" font-weight="bold" font-size="12.0000" fill="#000000" fill-opacity="1.0000" stroke-opacity="1.0000" >
+Data</tspan>
+</text>
+<text x="287.5000" y="414.0000">
+<tspan font-family="Times New Roman" font-style="italic" font-weight="bold" font-size="12.0000" fill="#000000" fill-opacity="1.0000" stroke-opacity="1.0000" >
+Dclock</tspan>
+</text>
+<text x="305.5000" y="394.8750">
+<tspan font-family="Times New Roman" font-style="italic" font-weight="bold" font-size="12.0000" fill="#000000" fill-opacity="1.0000" stroke-opacity="1.0000" >
+PFD</tspan>
+</text>
+<path d=" 
+M353.2500,378.0000
+L378.0000,378.0000" 
+style="stroke-width: 2.5000; stroke: #000000; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; fill: none; "/>
+<path d=" 
+M353.2500,414.0000
+L378.0000,414.0000" 
+style="stroke-width: 2.5000; stroke: #000000; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; fill: none; "/>
+<text x="348.2500" y="369.0000">
+<tspan font-family="Times New Roman" font-style="italic" font-weight="bold" font-size="12.0000" fill="#000000" fill-opacity="1.0000" stroke-opacity="1.0000" >
+Up</tspan>
+</text>
+<text x="348.2500" y="405.0000">
+<tspan font-family="Times New Roman" font-style="italic" font-weight="bold" font-size="12.0000" fill="#000000" fill-opacity="1.0000" stroke-opacity="1.0000" >
+Dn</tspan>
+</text>
+</svg>

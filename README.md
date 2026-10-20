@@ -49,6 +49,34 @@ The `Sky130_char` folders contain only the `.cir` and `.spiceinit` files.
 
 Every simulation writes `op_nodes.txt` and `op_devices.txt` (id, vgs, vds, vth, vdsat, gm, gds, cgs, cgd).
 
+## Simulation results and schematics
+
+[RESULTS.md](RESULTS.md) collects the loop-gain (stb) and unity-gain step (tran) plots, the open-loop AC plots of
+the single-stage amplifiers, and a schematic of every circuit. Each circuit folder also has a `results/` folder with
+the plots (PNG), the data (CSV) and the extracted metrics (`results.json`). Schematics are in `schematics/`
+(PNG, PDF and SVG).
+
+| Circuit | DC gain (dB) | UGF (MHz) | Phase margin (deg) |
+|---|---|---|---|
+| Opamp1_stb | 60.6 | 79.0 | 69.2 |
+| Opamp_2stg_Diff_ClassA_STB | 60.6 | 126.0 | 31.5 |
+| Opamp_2stg_FC_ClassA_STB | 73.9 | 71.3 | 32.0 |
+| Opamp_2stg_Telescopic_ClassA_STB | 81.9 | 68.7 | 49.3 |
+
+Results use ngspice 42 with the SkyWater models from `skywater-pdk-libs-sky130_fd_pr` (tt, 27 C). Other PDK builds
+or simulators can give slightly different numbers.
+
+## Tools
+
+| File | Purpose |
+|---|---|
+| `tools/run_sims.py` | Runs stb and unity-gain step simulations and writes plots, CSV and metrics (`python3 tools/run_sims.py . --in-place`) |
+| `tools/draw_schematics.py` | Draws the transistor-level schematics from the netlists and an operating-point run (`python3 tools/draw_schematics.py . schematics results_summary.json`) |
+| `tools/analog_sheet.py`, `tools/ams_symbols.py` | Drawing helpers (SchemDraw) and the AMS symbol loader |
+| `tools/ams_symbols/` | The AMS symbol library: one SVG per symbol plus the Visio stencil `AMS.vss` |
+
+The drawing tools need `pip install schemdraw matplotlib` and the Liberation Sans / Serif fonts.
+
 ## Requirements
 
 - [ngspice](https://ngspice.sourceforge.io/)

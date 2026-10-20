@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21.22pt" height="16.45pt" viewBox="39.8289 83.85 21.2211 16.450000000000003" >
+<g id="Layer1001" >
+<g id="Layer1002" >
+<path d=" 
+M47.2500,94.6000
+A6.7500,6.7500 0.0000 0,0 60.7500,94.6000
+A6.7500,6.7500 0.0000 0,0 47.2500,94.6000
+Z" 
+style="stroke-width: 0.2400; stroke-linecap: round; stroke-linejoin: round; fill-rule: evenodd; fill: #ffffff; "/>
+<path d=" 
+M47.2500,94.6000
+A6.7500,6.7500 0.0000 0,0 60.7500,94.6000
+A6.7500,6.7500 0.0000 0,0 47.2500,94.6000
+Z
+M49.9500,97.3000
+L49.9500,91.9000
+L52.6500,91.9000
+L52.6500,97.3000
+L55.3500,97.3000
+L55.3500,91.9000
+L58.0500,91.9000
+L58.0500,97.3000" 
+style="stroke-width: 0.2400; stroke: #000000; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: none; "/>
+</g>
+<text x="42.8289" y="86.8500">
+<tspan font-family="Arial" font-size="6.0000" fill="#000000" fill-opacity="1.0000" stroke-opacity="1.0000" >
+33 MHz</tspan>
+</text>
+</g>
+</svg>

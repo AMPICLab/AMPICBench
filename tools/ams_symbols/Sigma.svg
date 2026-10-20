@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65.01pt" height="49.88pt" viewBox="272.1141 371.625 65.01089999999999 49.875" >
+<text x="297.2557" y="387.1169">
+<tspan font-family="Symbol" font-weight="bold" font-size="18.0044" fill="#000000" fill-opacity="1.0000" stroke-opacity="1.0000" >
+</tspan>
+</text>
+<text x="309.9955" y="389.0378">
+<tspan font-family="Symbol" font-size="18.0044" fill="#000000" fill-opacity="1.0000" stroke-opacity="1.0000" >
+</tspan>
+</text>
+<path d=" 
+M319.7551,386.8632
+L334.1250,386.8632" 
+style="stroke-width: 2.5000; stroke: #000000; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: none; "/>
+<path d=" 
+M319.7557,386.4375
+A13.5000,13.5000 180.0000 1,1 306.2557,372.9375
+A13.5000,13.5000 180.0000 0,1 319.7557,386.4375
+Z" 
+style="stroke-width: 2.5000; stroke: #000000; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: none; "/>
+<defs>
+<marker id="endMarker5"  markerUnits="strokeWidth" orient="auto" markerWidth="8" markerHeight="6"
+ viewBox="0 0 10 10" refX="1" refY="5">
+<polyline points="0,0 10,5 0,10 1,5" fill="solid" />
+</marker>
+</defs>
+<path d=" 
+M306.0000,418.5000
+L306.0000,401.0625" 
+style="stroke-width: 2.5000; stroke: #000000; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: none; marker-end: url(#endMarker5); "/>
+<path d=" 
+M311.6250,407.2500
+L318.3750,407.2500" 
+style="stroke-width: 2.0000; stroke: #000000; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; fill: none; "/>
+<path d=" 
+M279.0000,378.0000
+L285.7500,378.0000" 
+style="stroke-width: 2.0000; stroke: #000000; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; fill: none; "/>
+<path d=" 
+M282.3750,374.6250
+L282.3750,381.3750" 
+style="stroke-width: 2.0000; stroke: #000000; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; fill: none; "/>
+<defs>
+<marker id="endMarker6"  markerUnits="strokeWidth" orient="auto" markerWidth="8" markerHeight="6"
+ viewBox="0 0 10 10" refX="1" refY="5">
+<polyline points="0,0 10,5 0,10 1,5" fill="solid" />
+</marker>
+</defs>
+<path d=" 
+M275.1141,386.9453
+L292.5516,386.9453" 
+style="stroke-width: 2.5000; stroke: #000000; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: none; marker-end: url(#endMarker6); "/>
+</svg>

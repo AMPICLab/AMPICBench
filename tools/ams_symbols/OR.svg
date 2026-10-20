@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60.00pt" height="42.00pt" viewBox="249.0 375.0 60.0 42.0" >
+<path d=" 
+M290.2500,396.0000
+L306.0000,396.0000" 
+style="stroke-width: 2.5000; stroke: #000000; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: none; "/>
+<path d=" 
+M252.0000,405.0000
+L266.6250,405.0000" 
+style="stroke-width: 2.5000; stroke: #000000; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: none; "/>
+<path d=" 
+M252.0000,387.0000
+L266.6250,387.0000" 
+style="stroke-width: 2.5000; stroke: #000000; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: none; "/>
+<path d=" 
+M261.0000,379.4400
+A16.5600,7.2000 90.0000 0,1 268.2000,396.0000
+A16.5600,7.2000 90.0000 0,1 261.0000,412.5600" 
+style="stroke-width: 3.5000; stroke: #000000; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; fill: none; "/>
+<path d=" 
+M261.0000,412.5600
+A27.7248,15.9418 178.7139 0,0 288.3600,396.0000
+A27.7248,15.9418 1.2861 0,0 261.0000,379.4400" 
+style="stroke-width: 3.5000; stroke: #000000; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; fill: none; "/>
+<path d=" 
+M252.0000,414.0000
+L306.0000,414.0000
+L306.0000,378.0000
+L252.0000,378.0000
+L252.0000,414.0000
+Z" 
+style="stroke-width: 0.7200; stroke: #000000; stroke-opacity: 0.0000; stroke-dasharray: none; stroke-linecap: round; stroke-linejoin: round; fill: none; "/>
+</svg>
