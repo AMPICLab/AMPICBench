@@ -115,13 +115,12 @@ If you use AMPICBench in your work, please cite it. GitHub shows a "Cite this re
 generated from `CITATION.cff`. BibTeX:
 
 ```bibtex
-@misc{ampicbench2026,
-  title        = {{AMPICBench}: Analog Circuit Benchmarks for Sizing, Simulation, and Layout Tools},
-  author       = {Saxena, Vishal},
-  organization = {{AMPIC Group}},
-  year         = {2026},
-  howpublished = {\url{https://github.com/<your-user-or-org>/ampic-bench}},
-  note         = {Version 0.1.0}
+@misc{ampicbench,
+  author = {Saxena, Vishal},
+  month  = Oct,
+  title  = {{AMPICBench: Analog Circuit Benchmarks for Sizing, Simulation, and Layout Tools}},
+  url    = {https://github.com/ampiclab/AMPICBench},
+  year   = {2026}
 }
 ```
 
